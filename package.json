@@ -3,24 +3,41 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@ozen-ui/fonts": "^0.41.0",
+    "@ozen-ui/icons": "^0.41.0",
+    "@ozen-ui/kit": "^0.41.0",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "@types/jest": "^27.5.2",
-    "@types/node": "^16.18.97",
-    "@types/react": "^18.3.2",
-    "@types/react-dom": "^18.3.0",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
+    "@types/node": "^16.18.78",
+    "@types/react": "^18.2.51",
+    "@types/react-dom": "^18.2.18",
+    "@types/react-router-dom": "^5.3.3",
+    "axios": "^1.6.7",
+    "classnames": "^2.5.1",
+    "craco-plugin-env": "^1.0.5",
+    "eslint": "^8.57.0",
+    "prettier": "^3.2.5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router": "^6.22.2",
+    "react-router-dom": "^6.22.2",
     "react-scripts": "5.0.1",
     "typescript": "^4.9.5",
     "web-vitals": "^2.1.4"
   },
+  
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "craco start",
+    "build": "craco build --mode development",
+    "build:dev": "craco build --mode development",
+    "build:prom": "craco build --mode production",
+    "test": "craco test",
+    "eject": "react-scripts eject",
+    "lint": "eslint --cache ./src",
+    "format": "prettier --write --ignore-unknown ./src",
+    "typecheck": "tsc --noEmit"
   },
   "eslintConfig": {
     "extends": [
@@ -39,5 +56,12 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@craco/craco": "^7.1.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-import-resolver-typescript": "^3.6.1",
+    "eslint-plugin-jest-dom": "^5.1.0",
+    "sass": "^1.71.1"
   }
 }
